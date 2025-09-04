@@ -11,20 +11,22 @@ namespace DUTBites.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int orderID { get; set; }
+        public int OrderID { get; set; }
+        [ForeignKey("OrderID")]
+        public virtual Order Orders { get; set; }
         public int UserId { get; set; }
-        [ForeignKey("UserId")]
         public virtual User User { get; set; }
         public int StoreId { get; set; }
-        [ForeignKey("StoreId")]
         public virtual Store Store { get; set; }
         public int? DriverId { get; set; }
-        [ForeignKey("DriverId")]
         public virtual DeliveryDriver DeliveryDriver { get; set; }
         public orderStatus status { get; set; }
         public DateTime orderDate { get; set; }
         public decimal totalPrice { get; set; }
         public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<Delivery> Deliveries { get; set; }
+        public virtual Delivery Delivery { get; set; }
+        public virtual Payment Payment { get; set; }
     }
 
     public enum orderStatus

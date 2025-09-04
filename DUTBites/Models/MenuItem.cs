@@ -11,9 +11,8 @@ namespace DUTBites.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int itemID { get; set; }
+        public int ItemID { get; set; }
         public int StoreID { get; set; }
-        [ForeignKey("StoreID")]
         public virtual Store Store { get; set; }
 
         public string itemName { get; set; }

@@ -14,6 +14,7 @@ namespace DUTBites.Models
         public int CampusID { get; set; }
         public string CampusName { get; set; }
         public string Location { get; set; }
+        public virtual ICollection<User> Users { get; set; }
         public virtual ICollection<Store> Stores { get; set; }
     }
 }

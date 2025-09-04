@@ -13,9 +13,7 @@ namespace DUTBites.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DriverID { get; set; }
-        [ForeignKey("User")]
         public int UserID { get; set; }
-        [ForeignKey("UserID")]
         public virtual User User { get; set; }
         public string LicensePlate { get; set; }
         public string DriverLicenseNumber { get; set; }
@@ -23,6 +21,8 @@ namespace DUTBites.Models
         public bool IsAvailable { get; set; }
         public DateTime LastKnownLocationTimestamp { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Delivery> Deliveries { get; set; }
         public virtual ICollection<DeliveryLocation> Locations { get; set; }
     }
+
 }

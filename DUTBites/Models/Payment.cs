@@ -11,11 +11,11 @@ namespace DUTBites.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int paymentID {get;set;}
-        public int orderID { get;set;}
-        [ForeignKey("orderID")]
-        public Order order { get; set;}
-        public int userID { get;set;}
+        public int PaymentID {get;set;}
+        public int OrderID { get;set;} // Add this property
+        public virtual Order Order { get; set; }
+        public int UserID { get;set;}
+        public User User { get; set;}
         public decimal amount {get;set;}
         public PaymentMethod method { get;set;}
         public PaymentStatus status {get;set;}

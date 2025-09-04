@@ -14,9 +14,8 @@ namespace DUTBites.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserID { get; set; }
         [ForeignKey("Campus")]
-        public int campusID { get; set; }
-        [ForeignKey("campusID")]
-        public Campus Campus { get; set; }
+        public int CampusID { get; set; }
+        public virtual Campus Campus { get; set; }
         public UserRole Role { get; set; }
         [Required]
         [Display(Name = "First Name")]
@@ -28,9 +27,7 @@ namespace DUTBites.Models
         [StringLength(50, ErrorMessage = "The {0} must be at most {1} characters long.")]
         [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "First Name must only contain letters")]
         public string Surname { get; set; }
-        [Required(ErrorMessage = "Enter Campus")]
-        [Display(Name = "Select Campus")]
-        public campus Campuss { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         [EmailAddress]
@@ -43,15 +40,15 @@ namespace DUTBites.Models
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [NotMapped]
         [Required]
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
-        public virtual ICollection<Campus> Canpuses { get; set; }
         public virtual ICollection<DeliveryDriver> DeliveryDrivers { get; set; }
-        public virtual ICollection<Payment> Payments { get; set; }
+
     }
     public enum UserRole
     {

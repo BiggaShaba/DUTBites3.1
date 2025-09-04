@@ -12,12 +12,11 @@ namespace DUTBites.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int locationID { get; set; }
-        public int driverID { get; set; }
-        [ForeignKey("driverID")]
+        public int LocationID { get; set; }
+        public int DriverID { get; set; }
         public virtual DeliveryDriver DeliveryDriver { get; set; }
         public float latitude { get; set; }
         public float longitude { get; set; }
-        public DateTime timestamp { get; set; }
+        public DateTime timestamp { get; set; } 
     }
 }

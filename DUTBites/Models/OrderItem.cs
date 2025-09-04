@@ -11,14 +11,12 @@ namespace DUTBites.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int orderItemID { get; set; }
+        public int OrderItemID { get; set; }
         public int OrderId { get; set; }
-        [ForeignKey("OrderId")]
         public virtual Order Order { get; set; }
 
         // FK to MenuItem
         public int MenuItemId { get; set; }
-        [ForeignKey("MenuItemId")]
         public virtual MenuItem MenuItem { get; set; }
         public int quantity { get; set; }
         public string notes { get; set; }
