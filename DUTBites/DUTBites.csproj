@@ -266,9 +266,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202509041711590_Test.cs" />
-    <Compile Include="Migrations\202509041711590_Test.Designer.cs">
-      <DependentUpon>202509041711590_Test.cs</DependentUpon>
+    <Compile Include="Migrations\202509050900008_Test1.cs" />
+    <Compile Include="Migrations\202509050900008_Test1.Designer.cs">
+      <DependentUpon>202509050900008_Test1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Campus.cs" />
@@ -375,8 +375,8 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.3.4\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202509041711590_Test.resx">
-      <DependentUpon>202509041711590_Test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202509050900008_Test1.resx">
+      <DependentUpon>202509050900008_Test1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

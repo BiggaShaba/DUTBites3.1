@@ -7,13 +7,13 @@ namespace DUTBites.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class Test : IMigrationMetadata
+    public sealed partial class Test1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Test));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Test1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202509041711590_Test"; }
+            get { return "202509050900008_Test1"; }
         }
         
         string IMigrationMetadata.Source
